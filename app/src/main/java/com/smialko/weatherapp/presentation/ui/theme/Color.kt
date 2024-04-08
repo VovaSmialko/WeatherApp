@@ -1,4 +1,4 @@
-package com.smialko.weatherapp.ui.theme
+package com.smialko.weatherapp.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
