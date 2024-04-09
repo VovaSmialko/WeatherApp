@@ -1,7 +1,7 @@
 package com.smialko.weatherapp.domain.entity
 
 data class City(
-    val int: Int,
+    val id: Int,
     val name: String,
     val country: String
 )

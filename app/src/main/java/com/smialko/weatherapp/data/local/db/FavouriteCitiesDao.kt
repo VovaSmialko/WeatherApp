@@ -1,10 +1,10 @@
-package com.smialko.weatherapp.data.network.local.local.db
+package com.smialko.weatherapp.data.local.db
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.smialko.weatherapp.data.network.local.local.model.CityDbModel
+import com.smialko.weatherapp.data.local.model.CityDbModel
 import kotlinx.coroutines.flow.Flow
 
 @Dao

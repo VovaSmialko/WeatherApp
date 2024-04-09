@@ -1,10 +1,10 @@
-package com.smialko.weatherapp.data.network.local.local.db
+package com.smialko.weatherapp.data.local.db
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.smialko.weatherapp.data.network.local.local.model.CityDbModel
+import com.smialko.weatherapp.data.local.model.CityDbModel
 
 @Database(entities = [CityDbModel::class], version = 1, exportSchema = false)
 abstract class FavouriteDatabase : RoomDatabase() {
