@@ -11,7 +11,6 @@ import com.smialko.weatherapp.domain.entity.usecase.GetFavouriteCitiesUseCase
 import com.smialko.weatherapp.presentation.favourite.FavouriteStore.Intent
 import com.smialko.weatherapp.presentation.favourite.FavouriteStore.Label
 import com.smialko.weatherapp.presentation.favourite.FavouriteStore.State
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import java.lang.Exception
 import javax.inject.Inject
@@ -22,7 +21,7 @@ interface FavouriteStore : Store<Intent, State, Label> {
 
         data object ClickSearch : Intent
 
-        data object ClickToFavourite : Intent
+        data object ClickAddToFavourite : Intent
 
         data class CItyItemClick(val city: City) : Intent
     }
@@ -119,7 +118,7 @@ class FavouriteStoreFactory @Inject constructor(
                 Intent.ClickSearch ->
                     publish(Label.ClickSearch)
 
-                Intent.ClickToFavourite ->
+                Intent.ClickAddToFavourite ->
                     publish(Label.ClickToFavourite)
             }
         }
