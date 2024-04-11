@@ -12,7 +12,6 @@ import dagger.assisted.AssistedInject
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
 class DefaultSearchComponent @AssistedInject constructor(
     private val storeFactory: SearchStoreFactory,
