@@ -39,8 +39,6 @@ class DefaultFavouriteComponent @AssistedInject constructor(
                     FavouriteStore.Label.ClickToFavourite -> {
                         onAddFavouriteClicked
                     }
-
-
                 }
             }
         }
