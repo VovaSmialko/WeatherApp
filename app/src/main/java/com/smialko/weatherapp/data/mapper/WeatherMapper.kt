@@ -20,7 +20,7 @@ fun WeatherDto.toEntity(): Weather = Weather(
 fun WeatherForecastDto.toEntity() = Forecast(
     currentWeather = current.toEntity(),
     upcoming = forecastDto.forecastDay.drop(1).map { dayDto ->
-        val dayWeatherDto = dayDto.datWeatherDto
+        val dayWeatherDto = dayDto.dayWeatherDto
         Weather(
             tempC = dayWeatherDto.tempC,
             conditionText = dayWeatherDto.conditionDto.text,
