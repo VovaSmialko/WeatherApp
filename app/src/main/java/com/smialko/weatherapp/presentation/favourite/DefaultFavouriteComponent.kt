@@ -33,11 +33,11 @@ class DefaultFavouriteComponent @AssistedInject constructor(
                     }
 
                     FavouriteStore.Label.ClickSearch -> {
-                        onSearchClicked
+                        onSearchClicked()
                     }
 
                     FavouriteStore.Label.ClickToFavourite -> {
-                        onAddFavouriteClicked
+                        onAddFavouriteClicked()
                     }
                 }
             }
