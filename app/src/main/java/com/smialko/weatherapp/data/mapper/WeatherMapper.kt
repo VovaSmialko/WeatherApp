@@ -12,6 +12,8 @@ fun WeatherCurrentDto.toEntity(): Weather = current.toEntity()
 
 fun WeatherDto.toEntity(): Weather = Weather(
     tempC = tempC,
+    minTempC = null,
+    maxTempC = null,
     conditionText = conditionDto.text,
     conditionUrl = conditionDto.iconUrl.correctImageUrl(),
     date = date.toCalendar()
@@ -23,6 +25,8 @@ fun WeatherForecastDto.toEntity() = Forecast(
         val dayWeatherDto = dayDto.dayWeatherDto
         Weather(
             tempC = dayWeatherDto.tempC,
+            minTempC = dayWeatherDto.tempMinC,
+            maxTempC = dayWeatherDto.tempMaxC,
             conditionText = dayWeatherDto.conditionDto.text,
             conditionUrl = dayWeatherDto.conditionDto.iconUrl.correctImageUrl(),
             date = dayDto.date.toCalendar()

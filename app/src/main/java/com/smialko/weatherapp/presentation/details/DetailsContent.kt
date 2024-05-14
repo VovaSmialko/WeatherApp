@@ -126,7 +126,8 @@ private fun TopBar(
                 }
                 Icon(
                     imageVector = icon,
-                    contentDescription = null
+                    contentDescription = null,
+                    tint = MaterialTheme.colorScheme.background
                 )
             }
         }
@@ -253,7 +254,8 @@ private fun RowScope.SmallWeatherCard(weather: Weather) {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.SpaceBetween
         ) {
-            Text(text = weather.tempC.tempToFormattedString())
+            Text(text = "min: ${weather.minTempC?.tempToFormattedString()}")
+            Text(text = "max: ${weather.maxTempC?.tempToFormattedString()}")
             GlideImage(
                 modifier = Modifier
                     .size(48.dp),
